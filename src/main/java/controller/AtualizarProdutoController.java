@@ -1,0 +1,47 @@
+package controller;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import model.Produto;
+
+import java.io.IOException;
+
+import dao.ProdutoDao;
+
+public class AtualizarProdutoController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public AtualizarProdutoController() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		
+		String mensagem = "Todos os campos precisam ser preenchidos";
+		
+		if(request.getParameter("nome") != null && !request.getParameter("nome").isEmpty()
+		   && request.getParameter("preco") != null && !request.getParameter("preco").isEmpty()) {
+			Produto produto = new Produto();
+			produto.setIdProduto(Integer.parseInt(request.getParameter("id")));
+			produto.setNomeProduto(request.getParameter("nome"));
+			produto.setPrecoProduto(Float.parseFloat(request.getParameter("preco")));
+			ProdutoDao.atualizarProduto(produto);
+			mensagem = "Produto atualizado com sucesso";
+		}
+		
+		request.setAttribute("mensagem", mensagem);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("alterar-produto.jsp");
+		dispatcher.forward(request, response);
+	}
+
+}

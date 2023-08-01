@@ -1,0 +1,198 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*start of code*/
+:root {
+    --dark-green: #005618;
+    --green: #00671D;
+    --brown: #AA6600;
+    --light-gray: #ececec;
+    --gray: #CECECE;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+}
+header {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: var(--green);
+}
+header h1 {
+   margin-left: 36px;
+   font-family: "Baloo";
+   font-size: 32px;
+   color: white
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+.main-box {
+    width: calc(800px - 144px);
+    margin-top: 24px;
+    padding: 24px 72px;
+}
+.main-box form {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 18px;
+}
+.main-box form input {
+    width: 275px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid var(--gray);
+    border-right: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    font-family: "Blinker";
+}
+.main-box form input:focus {
+    outline: none;
+}
+.main-box form button {
+    width: 40px;
+    height: 42px;
+    border: none;
+    background-color: var(--green);
+    color: white;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.main-box form button:hover {
+    background-color: var(--dark-green);
+}
+#mensagem-exclusao {
+	margin-top: 56px;
+	text-align: center;
+	font-size: 16px;
+	font-family: "Blinker";
+	color: var(--green);
+}
+.produto-container {
+    width: calc(100% - 24px);
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 12px;
+    background-color: white;
+    padding: 10px 12px 12px 12px;
+    border: 1px solid var(--green);
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px var(--light-gray);
+}
+.produto-container form {
+	margin-bottom: 0;
+    align-self: flex-end;
+    width: 95px;
+    display: flex;
+    justify-content: space-between;
+}
+.produto-container form button {
+    width: 40px;
+    height: 41px;
+    background-color: var(--green);
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+.produto-container button:hover {
+    background-color: var(--dark-green);
+}
+.id h4 {
+    text-align: left;
+    width: 40px;
+    font-family: "Baloo";
+    color: var(--brown);
+}
+.id p {
+    text-align: center;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--gray);
+    border-radius: 6px;
+    font-family: "Blinker";
+    color: var(--green);
+}
+.nome h4 {
+    text-align: left;
+    width: 250px;
+    font-family: "Baloo";
+    color: var(--green);
+}
+.nome p {
+    padding: 0 12px;
+    text-align: left;
+    line-height: 40px;
+    width: 226px;
+    height: 40px;
+    border: 1px solid var(--gray);
+    border-radius: 6px;
+    font-family: "Blinker";
+    color: var(--green);
+}
+.preco h4 {
+    text-align: left;
+    width: 125px;
+    font-family: "Baloo";
+    color: var(--green);
+}
+.preco p {
+    text-align: center;
+    line-height: 40px;
+    width: 125px;
+    height: 40px;
+    border: 1px solid var(--gray);
+    border-radius: 6px;
+    font-family: "Blinker";
+    color: var(--green);
+}
